@@ -3,41 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Settings - Shopify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            padding: 10px;
+            color: white;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .content {
+            margin: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .tab.active {
+            border-bottom: 2px solid green;
+            font-weight: bold;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .table th {
+            background-color: #f9f9f9;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .status.draft {
+            background-color: #f4f4f4;
+            color: #777;
+        }
+        .status.active {
+            background-color: #c8f7c5;
+            color: green;
+        }
+        .delete-icon {
+            cursor: pointer;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
-    <h1>Settings</h1>
-    <div>All settings</div>
-    <div>Published</div>
-    <div>BTC</div>
-    <div>USDT</div>
-    <div>TON</div>
-    <table>
-        <thead>
-            <tr>
-                <th>Setting name</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href="#">Content</a></td>
-                <td>Draft</td>
-                <td><span class="delete-icon">🗑</span></td>
-            </tr>
-            <tr>
-                <td><a href="#">Content</a></td>
-                <td>Active</td>
-                <td><span class="delete-icon">🗑</span></td>
-            </tr>
-            <tr>
-                <td><a href="#">Content</a></td>
-                <td>Active</td>
-                <td><span class="delete-icon">🗑</span></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="header">
+        <h1>Shopify</h1>
+    </div>
+    <div class="content">
+        <h2>Settings</h2>
+        <div class="tabs">
+            <div class="tab active">All settings</div>
+            <div class="tab">Published</div>
+            <div class="tab">BTC</div>
+            <div class="tab">USDT</div>
+            <div class="tab">TON</div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Setting</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#">Set-Creator-Logic</a></td>
+                    <td><span class="status draft">Draft</span></td>
+                    <td><span class="delete-icon">🗑️</span></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Content</a></td>
+                    <td><span class="status active">Active</span></td>
+                    <td><span class="delete-icon">🗑️</span></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Content</a></td>
+                    <td><span class="status draft">Draft</span></td>
+                    <td><span class="delete-icon">🗑️</span></td>
+                </tr>
+                <!-- Repeat for other rows -->
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
