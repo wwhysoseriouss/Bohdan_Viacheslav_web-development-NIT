@@ -1,84 +1,97 @@
-/* Основні стилі для body */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
-/* Стилі для хедера */
-.header {
-    background-color: #333;
-    padding: 10px;
-    color: white;
-    text-align: left;
-    padding-left: 20px;
-}
-
-/* Стилі для основного контенту */
-.content {
-    margin: 20px;
-    background-color: white;
-    padding: 20px;
+.container {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-/* Стилі для вкладок */
-.tabs {
+.header {
     display: flex;
-    border-bottom: 1px solid #e0e0e0;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    text-align: center;
+.logo {
+    height: 40px;
+    margin-right: 10px;
 }
 
-.tab.active {
-    border-bottom: 2px solid green;
+.header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.header span {
+    font-weight: normal;
+    color: #888;
+}
+
+.content {
+    padding: 20px;
+}
+
+.form-title {
+    margin-bottom: 20px;
+}
+
+.form-title label {
     font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
 }
 
-/* Стилі для таблиці */
-.table {
+.form-title input {
     width: 100%;
-    border-collapse: collapse;
-}
-
-.table th, .table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.table th {
-    background-color: #f9f9f9;
-}
-
-/* Стилі для статусів */
-.status {
-    display: inline-block;
-    padding: 5px 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
 }
 
-.status.draft {
-    background-color: #f4f4f4;
-    color: #777;
+.formulas {
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background-color: #f0f0f0;
 }
 
-.status.active {
-    background-color: #c8f7c5;
-    color: green;
+.empty-state {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 10px;
 }
 
-/* Стилі для іконки видалення */
-.delete-icon {
+.create-button {
+    padding: 10px 20px;
+    background-color: #008060;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    color: #999;
+    font-size: 16px;
 }
 
+.footer {
+    text-align: left;
+    padding-top: 20px;
+}
 
+.back-button {
+    background-color: transparent;
+    color: #008060;
+    border: 1px solid #008060;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
