@@ -5,71 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings - Shopify</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .header {
-            background-color: #333;
-            padding: 10px;
-            color: white;
-            text-align: left;
-            padding-left: 20px;
-        }
-        .content {
-            margin: 20px;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .tabs {
-            display: flex;
-            border-bottom: 1px solid #e0e0e0;
-            margin-bottom: 20px;
-        }
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            text-align: center;
-        }
-        .tab.active {
-            border-bottom: 2px solid green;
-            font-weight: bold;
-        }
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .table th, .table td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .table th {
-            background-color: #f9f9f9;
-        }
-        .status {
-            display: inline-block;
-            padding: 5px 10px;
-            border-radius: 4px;
-        }
-        .status.draft {
-            background-color: #f4f4f4;
-            color: #777;
-        }
-        .status.active {
-            background-color: #c8f7c5;
-            color: green;
-        }
-        .delete-icon {
-            cursor: pointer;
-            color: #999;
-        }
-    </style>
 </head>
 <body>
     <div class="header">
@@ -96,19 +31,32 @@
                 <tr>
                     <td><a href="#">Set-Creator-Logic</a></td>
                     <td><span class="status draft">Draft</span></td>
-                    <td><span class="delete-icon">🗑️</span></td>
+                    <td><img src="assets\Icontrash.svg" alt="Delete" class="delete-icon"></td>
                 </tr>
                 <tr>
                     <td><a href="#">Content</a></td>
                     <td><span class="status active">Active</span></td>
-                    <td><span class="delete-icon">🗑️</span></td>
+                    <td><img src="assets\Icontrash.svg" alt="Delete" class="delete-icon"></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Set-Creator-Logic</a></td>
+                    <td><span class="status draft">Draft</span></td>
+                    <td><img src="assets\Icontrash.svg" alt="Delete" class="delete-icon"></td>
                 </tr>
                 <tr>
                     <td><a href="#">Content</a></td>
-                    <td><span class="status draft">Draft</span></td>
-                    <td><span class="delete-icon">🗑️</span></td>
+                    <td><span class="status active">Active</span></td>
+                    <td><img src="assets\Icontrash.svg" alt="Delete" class="delete-icon"></td>
                 </tr>
-                <!-- Repeat for other rows -->
+                    <td><a href="#">Set-Creator-Logic</a></td>
+                    <td><span class="status draft">Draft</span></td>
+                    <td><img src="assets\Icontrash.svg" alt="Delete" class="delete-icon"></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Content</a></td>
+                    <td><span class="status active">Active</span></td>
+                    <td><img src="assets\Icontrash.svg" alt="Delete" class="delete-icon"></td>
+                </tr>
             </tbody>
         </table>
     </div>
