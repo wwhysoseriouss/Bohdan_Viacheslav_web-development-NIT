@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopify Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets\styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <img src="assets/shopify_logo.png" alt="Shopify Logo" class="logo">
-            <h2>Set-Creator-Logic <span>Formulas</span></h2>
-        </header>
+    <header class="fullscreen-bar">
+        <button class="back-button" onclick="location.href='Main_Page.html'">Back</button>
+    </header>
+    <header class="header">
+        <a href="Main_Page.html">
+        <img src="assets\logo.svg" alt="Shopify Logo" class="logo"></a>
+    </header>
+    <div class="subheadcontainer">
+        <div class="set_creator_butt" onclick="location.href='Main_Page.html'"><h2>Set-Creator-Logic</h2></div>
+        <div class="subheader"><h2>Formulas</h2></div>
         
+        <div class="button-container">
+            <button class="button discard">Discard</button>
+            <button class="button save">Save</button>
+            <button class="button create">Create formula</button>
+        </div>
+    </div>
+
+    <div class="container">        
         <div class="content">
             <div class="form-title">
                 <label for="title">Title</label>
@@ -20,13 +33,33 @@
             </div>
             <div class="formulas">
                 <p class="empty-state">Oopsie, seems that you have no formulas yet</p>
-                <button class="create-button">Create your first formula!</button>
+                <button class="create-button">+</button>
             </div>
         </div>
+    </div>
 
-        <footer class="footer">
-            <button class="back-button" onclick="location.href='Main_Page.html'">Back</button>
-        </footer>
+    <div class="formula-section">
+            <h2>Your formulas</h2>
+            <table>
+                <tr>
+                    <th>Formula Name</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>BTC increase each 2 sec for T-Shirts</td>
+                    <td>
+                        <img src="assets\edit.svg" alt="Edit" class="icon">
+                        <img src="assets\Icontrash.svg" alt="Delete" class="icon">
+                    </td>
+                </tr>
+                <tr>
+                    <td>BTC increase each 2 sec for T-Shirts</td>
+                    <td>
+                        <img src="assets\edit.svg" alt="Edit" class="icon">
+                        <img src="assets\Icontrash.svg" alt="Delete" class="icon">
+                    </td>
+                </tr>
+            </table>
     </div>
 </body>
 </html>
