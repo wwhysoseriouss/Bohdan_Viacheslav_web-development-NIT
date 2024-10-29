@@ -25,6 +25,15 @@ body {
     font-size: small;
 }
 
+.control_line {
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: small;
+}
+
 .set_creator_butt {
     font-family: Arial, sans-serif;
     font-size:  small;
@@ -59,25 +68,26 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     cursor: pointer;
-}
+    
+}:hover
 
 .discard {
     background-color: white;
     color: black;
     border-radius: 14px;
-}
+}:hover
 
 .save {
     background-color: #d2d2d2;
     color: rgb(147, 147, 147);
     border-radius: 14px;
-}
+}:hover
 
 .create {
     background-color: #3a3a3a;
     color: white;
     border-radius: 14px;
-}
+}:hover
 
 /* Стилі для вкладок */
 .tabs {
