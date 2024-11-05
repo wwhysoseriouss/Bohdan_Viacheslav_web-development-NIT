@@ -65,13 +65,13 @@ function renderSettingElement(setting) {
 
     // Відображення статусу налаштування
     const statusElement = settingElement.querySelector('.setting-status');
-    statusElement.textContent = setting.active ? 'Active' : 'Inactive'; // Статус налаштування
+    statusElement.textContent = setting.active ? 'Active' : 'Draft'; // Статус налаштування
 
     // Перемикання "active" класу
     if (setting.active) {
-        settingElement.classList.add('active');
+        settingElement.classList.add('Active');
     } else {
-        settingElement.classList.remove('active');
+        settingElement.classList.remove('Active');
     }
 
     // 4. Додавання обробника події для кнопки видалення
@@ -102,6 +102,29 @@ function toggleEmptyState() {
     }
 }
 
+const state = {
+    settings: []
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    const createButton = document.querySelector('.button.create');
+    createButton.addEventListener('click', function () {
+        const settingName = document.getElementById('setting-name').value;
+        const settingStatus = document.getElementById('setting-status').value;
+
+        if (settingName) { // Перевірка, що ім'я налаштування не порожнє
+            const newSetting = {
+                name: settingName,
+                status: settingStatus
+            };
+            addNewSetting(newSetting);
+            document.getElementById('setting-name').value = ''; // Очищення поля введення
+        } else {
+            alert('Please enter a setting name.'); // Повідомлення, якщо поле порожнє
+        }
+    });
+});
+
 function addNewSetting(newSetting) {
     // 1. Додавання нового налаштування до state.settings
     state.settings.push(newSetting);
@@ -117,6 +140,27 @@ function addNewSetting(newSetting) {
     state.settings.forEach(setting => {
         renderSettingElement(setting); // Відображення кожного налаштування
     });
+}
+
+function renderSettingElement(setting) {
+    const settingsList = document.querySelector('#settings-list');
+
+    const row = document.createElement('tr');
+    row.classList.add('settings-item');
+
+    const settingLink = document.createElement('td');
+    settingLink.innerHTML = `<a href="#">${setting.name}</a>`;
+    row.appendChild(settingLink);
+
+    const statusCell = document.createElement('td');
+    statusCell.innerHTML = `<span class="status ${setting.status.toLowerCase()}">${setting.status}</span>`;
+    row.appendChild(statusCell);
+
+    const actionsCell = document.createElement('td');
+    actionsCell.innerHTML = '<img src="assets/Icontrash.svg" alt="Delete" class="delete-icon">';
+    row.appendChild(actionsCell);
+
+    settingsList.appendChild(row);
 }
 
 document.querySelectorAll('.tab').forEach(function(tab) {
