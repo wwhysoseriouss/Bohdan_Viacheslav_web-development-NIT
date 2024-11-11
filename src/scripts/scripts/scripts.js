@@ -20,24 +20,30 @@ fetch('assets/scripts/setting.json')
     .catch(error => console.error('Error loading JSON:', error));
 
 
+let states = {
+    settings: [
+        {id: 1, name: "Set-Creator-Logic", status: "draft"}
+    ]
+};
 
 function removeSettingHandler(settingId) {
-    // 1. Видалення елемента з DOM
-    const settingLineElement = document.querySelector(`#setting-${settingId}`);
-    if (settingLineElement) {
-        settingLineElement.remove(); // Видаляємо елемент з DOM
-    }
+    states.settings = states.settings.filter(setting => setting.id !== settingId);
 
-    // 2. Пошук індексу налаштування в масиві state.settings
-    const settingIndex = state.settings.findIndex(setting => setting.id === settingId);
-    if (settingIndex !== -1) {
-        // 3. Видалення налаштування з масиву state.settings
-        state.settings.splice(settingIndex, 1); // Видаляємо елемент із масиву
-    }
+    // Оновлюємо HTML, видаляючи рядок з таблиці
+    const rowToDelete = document.querySelector(`.settings-item[data-id="${settingId}"]`);
+    if (rowToDelete) rowToDelete.remove();
 
-    // 4. Оновлення порожнього стану
-    toggleEmptyState(); // Перевіряємо, чи залишились налаштування, і оновлюємо інтерфейс
+    // Перевіряємо порожній стан
+    toggleEmptyState();
 }
+
+// Додаємо обробники подій до іконок видалення
+document.querySelectorAll('.delete-icon').forEach(icon => {
+    icon.addEventListener('click', function () {
+        const settingId = parseInt(this.closest('.settings-item').getAttribute('data-id'));
+        deleteSetting(settingId);
+    });
+});
 
 function renderSettingElement(setting) {
     // 1. Вибір елемента шаблону
@@ -81,14 +87,14 @@ function renderSettingElement(setting) {
     });
 
     // 5. Додавання до DOM
-    const settingsList = document.querySelector('#settings-list');
+    const settingsList = document.querySelector('.settings-list');
     settingsList.appendChild(settingElement);
 }
 
 function toggleEmptyState() {
     // 1. Отримуємо посилання на елементи порожнього стану та таблиці налаштувань
-    const emptyStateElement = document.querySelector('#empty-state');
-    const settingsTable = document.querySelector('#settings-table');
+    const emptyStateElement = document.querySelector('.empty-state');
+    const settingsTable = document.querySelector('.settings-list');
     
     // 2. Перевіряємо, чи state.settings порожній
     if (state.settings.length === 0) {
@@ -130,7 +136,7 @@ function addNewSetting(newSetting) {
     state.settings.push(newSetting);
 
     // 2. Очищення попереднього рендеру
-    const settingsList = document.querySelector('#settings-list');
+    const settingsList = document.querySelector('.settings-list');
     settingsList.innerHTML = ''; // Очищення списку перед рендером
 
     // 3. Оновлення порожнього стану
