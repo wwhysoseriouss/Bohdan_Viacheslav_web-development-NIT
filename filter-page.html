@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/reset.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <title>Myfilter-page</title>
+</head>
+
+<body>
+
+    <h1 class="settings">Settings</h1>
+    <section class="container">
+        <div class="menu">
+            <input type="radio" id="btn_all" name="menu" class="menu_radio" checked>
+            <label for="btn_all" class="menu_button">All settings</label>
+        
+            <input type="radio" id="btn_published" name="menu" class="menu_radio">
+            <label for="btn_published" class="menu_button">Published</label>
+        
+            <input type="radio" id="btn_btc" name="menu" class="menu_radio">
+            <label for="btn_btc" class="menu_button">BTC</label>
+        
+            <input type="radio" id="btn_usdt" name="menu" class="menu_radio">
+            <label for="btn_usdt" class="menu_button">USDT</label>
+        
+            <input type="radio" id="btn_ton" name="menu" class="menu_radio">
+            <label for="btn_ton" class="menu_button">TON</label>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                <div class="s_n">
+                    <th>Setting-name</th>
+                    <th>Status</th>
+                </div>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="content">
+                        <a class="content_link" href="settings-page.html">Content</a>
+                    </td>
+                    <td class="status">
+                        <div>Draft</div>
+                    </td>
+                    <td>
+                        <img class="trash" src="assets/icons/trash.svg" alt="Delete">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content">
+                        <a class="content_link" href="#">Content</a>
+                    </td>
+                    <td class="status st_active">
+                        <div>Active</div>
+                    </td>
+                    <td>
+                        <img class="trash" src="assets/icons/trash.svg" alt="Delete">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content">
+                        <a class="content_link" href="#">Content</a>
+                    </td>
+                    <td class="status st_active">
+                        <div>Active</div>
+                    </td>
+                    <td>
+                        <img class="trash" src="assets/icons/trash.svg" alt="Delete">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
