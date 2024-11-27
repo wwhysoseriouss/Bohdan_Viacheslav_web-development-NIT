@@ -1,4 +1,4 @@
-/* reset and base styles  */
+/* Reset and base styles  */
 * {
     padding: 0px;
     margin: 0px;
@@ -13,7 +13,7 @@
 }
 
 
-/* links */
+/* Links */
 
 
 a, a:link, a:visited {
@@ -26,7 +26,7 @@ a:hover {
 }
 
 
-/* common */
+/* Common */
 
 
 aside, nav, footer, header, section, main {
@@ -61,7 +61,7 @@ address {
 }
 
 
-/* form */
+/* Form */
 
 
 input, textarea, button, select {
