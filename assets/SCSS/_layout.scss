@@ -1,15 +1,18 @@
 //_layout.scss
 
-/* Медиа-запросы для экранов до 768px */
 // @media (max-width: 768px) {
 
 // }
 
-/* Медиа-запросы для экранов до 480px */
-
 
 
 @media  (max-width: 480px )  {
+
+    .menu {
+
+        max-height: none !important;
+
+    }
 
     .formulas_s {
         margin: 1.4rem 0.8rem !important;

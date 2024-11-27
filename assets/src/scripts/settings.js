@@ -16,6 +16,25 @@ const selectors = {
 }
 
 
+function getState() {
+    const data = localStorage.getItem('state');
+    return JSON.parse(data);
+}
+function updateState(state) {
+    localStorage.setItem('state', JSON.stringify(state));
+}
+
+const state = getState();
+if (state){
+    console.log("🔥#GOOD#🔥 ---> state.json parsed from localeStorage!!!")
+}
+
+
+
+
+
+
+
 //  CURRENT LIST OF FORMULAS
 const currentSettings  = document.querySelector(selectors.formulasFolder);
 //  SAVED LIST OF FORMULAS
@@ -51,8 +70,8 @@ emptyStateFunction(currentSettings);
 
 
 // JSON FROM HTML FILE
-const initialState = document.querySelector(selectors.stateJson).textContent;
-const state = JSON.parse(initialState);
+// const initialState = document.querySelector(selectors.stateJson).textContent;
+// const state = JSON.parse(initialState);
 
 
 document.addEventListener('click', (event) => {
@@ -139,7 +158,7 @@ document.addEventListener('click', (e) => {
         const index = children.indexOf(child); // index of formula template
         console.log(index);
         const urlToMerge = "http://127.0.0.1:5500/Bohdan_Viacheslav_web-development-NIT/";
-        console.log
+        // window.location.href = `${urlToMerge}formula.html${url.search}&id=${index}#${e.target.innerText}`;
         window.location.href = `${urlToMerge}formula.html${url.search}&id=${index}`;
     }
 })
