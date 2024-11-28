@@ -184,7 +184,20 @@ button {
 body {
   background: #F1F1F1;
   font-family: "Inter";
-  margin: 1rem;
+  margin: 0;
+}
+
+.top-bar{
+  background-color: #111;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  height: 60px; /* Фіксована висота */
 }
 
 h1 {
@@ -227,6 +240,47 @@ filter-page
 .container {
   margin: 1rem;
 }
+
+.top-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.top-bar-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 0; /* Забезпечує вирівнювання до лівого краю */
+  padding-left: 0;
+}
+
+.top-bar-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.top-bar-navigation {
+  display: flex;
+  gap: 15px;
+}
+
+.top-bar-nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.top-bar-nav-link:hover {
+  text-decoration: underline;
+  color: #1db954;
+}
+
+main {
+  padding: 80px 20px; /* Відступ для контенту */
+  margin-top: 60px;}
 
 .table {
   background-color: white;
